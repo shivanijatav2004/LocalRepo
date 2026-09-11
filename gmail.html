@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three Screens Side by Side</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #e9eef2;
+  display: flex;
+  justify-content: center;
+  padding: 40px 10px;
+}
+
+/* 3 Screens Side-by-Side */
+.wrapper {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Screen Cards */
+.screen {
+  width: 330px;
+  padding: 25px;
+  border-radius: 28px;
+  background: linear-gradient(to bottom, #d8efff, #ffffff);
+  box-shadow: 0 5px 22px rgba(0,0,0,0.12);
+}
+
+/* Headings */
+h2 {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+p {
+  color: #555;
+  margin-bottom: 18px;
+}
+
+/* Inputs */
+label {
+  color: #444;
+  font-size: 14px;
+  margin-top: 10px;
+  display: block;
+}
+input, select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  margin-bottom: 12px;
+}
+
+/* Buttons */
+.primary-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(to right, #00b4d8, #0077b6);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.google-btn, .apple-btn {
+  width: 100%;
+  padding: 13px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  background: white;
+  margin-top: 10px;
+}
+
+/* Divider */
+.divider {
+  text-align: center;
+  margin: 15px 0;
+  color: #777;
+}
+
+/* Utility */
+.row {
+  display: flex;
+  align-items: center;
+}
+.between {
+  justify-content: space-between;
+}
+.center {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Profile Picture */
+.profile-pic {
+  width: 90px;
+  height: 90px;
+  background: url('https://i.pravatar.cc/150') center/cover;
+  border-radius: 50%;
+  margin: 10px auto 20px;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- LOGIN SCREEN -->
+  <div class="screen">
+    <h2>Hello there 👋</h2>
+    <p>Please enter your email & password to access your account.</p>
+
+    <label>Email Address</label>
+    <input type="email" placeholder="Email">
+
+    <label>Password</label>
+    <input type="password" placeholder="Password">
+
+    <div class="row between">
+      <label><input type="checkbox"> Remember Me</label>
+      <a href="#">Forgot Password?</a>
+    </div>
+
+    <button class="primary-btn">Continue</button>
+
+    <div class="divider">Or</div>
+
+    <button class="google-btn">Continue with Google</button>
+    <button class="apple-btn">Continue with Apple</button>
+
+    <p class="center">New here? <a href="#">Sign up</a></p>
+  </div>
+
+
+
+  <!-- SIGNUP SCREEN -->
+  <div class="screen">
+    <h2>Hello there 👋</h2>
+    <p>Please enter your email & password to create your account.</p>
+
+    <label>Email Address</label>
+    <input type="email" placeholder="hello@example.com">
+
+    <label>Password</label>
+    <input type="password" placeholder="Password">
+
+    <label>Confirm Password</label>
+    <input type="password" placeholder="Confirm Password">
+
+    <label class="row">
+      <input type="checkbox"> I agree to Terms & Policy
+    </label>
+
+    <button class="primary-btn">Continue</button>
+
+    <div class="divider">Or</div>
+
+    <button class="google-btn">Continue with Google</button>
+    <button class="apple-btn">Continue with Apple</button>
+
+    <p class="center">Already have an account? <a href="#">Login</a></p>
+  </div>
+
+
+
+  <!-- PROFILE SETUP SCREEN -->
+  <div class="screen">
+    <h2>Profile Setup</h2>
+    <p>Add your details</p>
+
+    <div class="profile-pic"></div>
+
+    <label>Name</label>
+    <input type="text" placeholder="Full Name">
+
+    <label>Phone Number</label>
+    <input type="text" placeholder="Phone Number">
+
+    <label>Gender</label>
+    <select>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+
+    <label>Date of Birth</label>
+    <input type="date">
+
+    <button class="primary-btn">Next</button>
+  </div>
+
+</div>
+
+</body>
+</html>
